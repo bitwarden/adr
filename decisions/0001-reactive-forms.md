@@ -1,9 +1,5 @@
 # Use Angular Reactive Forms
 
-* Status: proposed
-* Deciders: Oscar Hinton, Matt Gibson
-* Date: 2022-04-28
-
 ## Context and Problem Statement
 
 Most of the forms in our Angular applications use the template driven forms.
