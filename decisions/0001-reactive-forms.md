@@ -18,7 +18,7 @@ Source: https://angular.io/guide/forms-overview#choosing-an-approach
 
 ## Decision Outcome
 
-Chosen option: **Reactove forms**, because our needs exceed what template-driven forms are recommended for.
+Chosen option: **Reactive forms**, because our needs exceed what template-driven forms are recommended for.
 
 ### Positive Consequences <!-- optional -->
 
