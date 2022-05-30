@@ -60,8 +60,7 @@ class OrganizationService {
   }
 
   async save(organizations: { [id: string]: OrganizationData }) {
-    return await this.stateService.saveAccountData(this._activeAccount, StorageKey, organizations);
-    await this.stateService.save(organizations);
+    await this.stateService.saveAccountData(this._activeAccount, StorageKey, organizations);
     await this._organizations$.next(await this.decryptOrgs(this._activeAccount, organizations));
   }
 }
