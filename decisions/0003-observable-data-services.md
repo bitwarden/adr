@@ -5,9 +5,12 @@
 The Bitwarden clients currently have a quite complex state architecture, where
 all the state is handled by a single service. This has resulted in everything
 being tightly coupled to the `StateService` essentially making it a God object.
-We need to decouple the services from the state.
 
-At the same time we need to migrate our components
+At the same time many components are tightly coupled towards the state as well,
+which makes it difficult to update different areas. This has resulted in the
+`MessagingService` service being used to synchronize state updates by sending
+events. While events are a perfectly valid way of transfering state we should
+not send empty events and then have the components re-fetch their state.
 
 ## Considered Options
 
@@ -19,6 +22,8 @@ At the same time we need to migrate our components
 Chosen option: **Observable data services**, because
 
 * Allows us to quickly interate towards a more reactive data model.
+  * Reactive data model lets us get rid of the event messages.
+  * Components will always display the latest state.
 * Does not require a significant upfront investment.
 * The work towards a reactive data model will allow us to adopt patterns like
 NGRX in the future should it be needed.
