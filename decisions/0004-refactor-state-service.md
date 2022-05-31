@@ -35,5 +35,19 @@ interface StateService {
   saveGlobalData<T>: (key: string, options?: StorageOptions) => Promise<void>;
   deleteGlobalData<T>: (key: string, options?: StorageOptions) => Promise<void>;
 }
+```
+
+```ts
+// StorageKey is an internal constant, and should be prefixed with the domain.
+//  DO NOT EXPORT IT.
+const StorageKey = "organizations";
+
+class Organization {
+  async save(organizations: { [id: string]: OrganizationData }) {
+    await this._stateService.saveAccountData(this._activeAccount, StorageKey, organizations);
+    await this._organizations$.next(await this.decryptOrgs(this._activeAccount, organizations));
+  }
+}
+```
 
 [observable]: ./0003-observable-data-services.md
