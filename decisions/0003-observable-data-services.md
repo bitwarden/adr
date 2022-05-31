@@ -2,10 +2,6 @@
 
 ## Context and Problem Statement
 
-The Bitwarden clients currently have a quite complex state architecture, where
-all the state is handled by a single service. This has resulted in everything
-being tightly coupled to the `StateService` essentially making it a God object.
-
 At the same time many components are tightly coupled towards the state as well,
 which makes it difficult to update different areas. This has resulted in the
 `MessagingService` service being used to synchronize state updates by sending
@@ -36,37 +32,24 @@ The `OrganizationService` should take ownership of all Organization related
 data.
 
 ```ts
-// state.service.ts
-
-// StateService should have generic data access methods.
-//  We most likely do not need to store things in memory for `StateService`
-//  since the memory portion should be handled by the individual services.
-interface StateService {
-  getAccountData<T>: (account: string, key: string, options?: StorageOptions) => Promise<T>;
-  saveAccountData<T>: (account: string, key: string, options?: StorageOptions) => Promise<T>;
-}
-
-// organization.service.ts
-
-// StorageKey is an internal constant, and should be prefixed with the domain.
-const StorageKey = "organizations";
-
-// OrganizationService keeps track of the active account and replaces it's data if needed.
 class OrganizationService {
-  private _activeAccount: Account;
   private _organizations: new BehaviorSubject<Organization[]>([]);
   organizations$: Observable<Organization[]> = this._organizations$.asObservable();
 
-  constructor() {
-    stateService.account$.subscribe((account) => {
-      this._activeAccount = account;
-      this.getOrgsForAccount(account).then(this._organizations$.next);
-    }
+  async save(organizations: { [id: string]: OrganizationData }) {
+    await this._organizations$.next(await this.decryptOrgs(this._activeAccount, organizations));
+  }
+}
+
+class Component {
+  ngInit() {
+    this.subscription = this._organizationService.organizations$.subscribe((orgs) => {
+      this.orgs = orgs;
+    });
   }
 
-  async save(organizations: { [id: string]: OrganizationData }) {
-    await this.stateService.saveAccountData(this._activeAccount, StorageKey, organizations);
-    await this._organizations$.next(await this.decryptOrgs(this._activeAccount, organizations));
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 }
 ```
