@@ -2,11 +2,12 @@
 
 ## Context and Problem Statement
 
-At the same time many components are tightly coupled towards the state as well,
-which makes it difficult to update different areas. This has resulted in the
-`MessagingService` service being used to synchronize state updates by sending
-events. While events are a perfectly valid way of transfering state we should
-not send empty events and then have the components re-fetch their state.
+Many of our components and services are tightly coupled towards the state of
+different domains. This results in tight coupling and difficulty in modifying
+the different areas. Which has lead to `MessagingService` service being used to
+synchronize state updates by sending events. While event sourcing is a perfectly
+valid way of developing software, our current events are empty resultin in the 
+components re-fetch their state manually.
 
 ## Considered Options
 

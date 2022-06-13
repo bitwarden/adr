@@ -25,15 +25,15 @@ We should refactor the state service to be a generic storage container.
 
 ```ts
 interface StateService {
-  getAccountData<T>: (account: string, key: string, options?: StorageOptions) => Promise<T>;
-  saveAccountData<T>: (account: string, key: string, options?: StorageOptions) => Promise<void>;
-  deleteAccountData<T>: (account: string, key: string, options?: StorageOptions) => Promise<void>;
+  getAccountData<T>: (account: Account, key: string, options?: StorageOptions) => Promise<T>;
+  saveAccountData: (account: Account, key: string, options?: StorageOptions) => Promise<void>;
+  deleteAccountData: (account: Account, key: string, options?: StorageOptions) => Promise<void>;
 
-  deleteAllAccountData: (account: string);
+  deleteAllAccountData: (account: Account);
 
   getGlobalData<T>: (key: string, options?: StorageOptions) => Promise<T>;
-  saveGlobalData<T>: (key: string, options?: StorageOptions) => Promise<void>;
-  deleteGlobalData<T>: (key: string, options?: StorageOptions) => Promise<void>;
+  saveGlobalData: (key: string, options?: StorageOptions) => Promise<void>;
+  deleteGlobalData: (key: string, options?: StorageOptions) => Promise<void>;
 }
 ```
 
