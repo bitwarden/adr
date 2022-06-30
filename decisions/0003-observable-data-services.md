@@ -34,8 +34,6 @@ data.
 
 ```ts
 class OrganizationService {
-  private destroy$: Subject<boolean> = new Subject<void>();
-
   private _organizations: new BehaviorSubject<Organization[]>([]);
   organizations$: Observable<Organization[]> = this._organizations$.asObservable();
 
@@ -44,9 +42,11 @@ class OrganizationService {
   }
 }
 
-class Component {
+class Component implements OnDestroy {
+  private destroy$: Subject<void> = new Subject<void>();
+
   ngInit() {
-    this.subscription = this._organizationService.organizations$
+    this._organizationService.organizations$
       .pipe(takeUntil(this.destroy$))
       .subscribe((orgs) => {
         this.orgs = orgs;
