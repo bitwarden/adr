@@ -19,7 +19,7 @@ We should just pick one.
 
 * **Use Substitute and ban developers from using Jest mocks** - we keep both libraries and continue to use them both in tandem. In this case, we should provide clear guidance and training to developers to use Substitute for all mocking and argument matching (not Jest).
 
-* **Deprecate Substitute and use Jest with jest-mock-extended instead** - we deprecate Substitute and update all existing tests to use Jest mocks instead. We use [jest-mock-extended](https://github.com/marchaos/jest-mock-extended/) for convenient mocking syntax and better integration with Typescript.
+* **Deprecate Substitute and use Jest with jest-mock-extended instead** - we deprecate Substitute and update all existing tests to use Jest mocks instead. We use [jest-mock-extended](https://github.com/marchaos/jest-mock-extended/) for convenient mocking syntax and better integration with Typescript. There should not be any loss of functionality arising from this change.
 
 * **Use a different mocking library and/or test runner** - we change to something else entirely. This is not really on the table here, but it is an option. Jest is working well so far, so I don't propose we change it.
 
