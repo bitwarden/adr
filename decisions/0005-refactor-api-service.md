@@ -14,7 +14,7 @@ package.
 * **Extract Class** - We should break up the class using the _Extract Class_
 refactor, where each domain context should have its own _API_ service. The
 `ApiService` should be converted into a generic service that doesn't care what
-the request or response is.
+the request or response is and should only be used within other API services.
 * **Do nothing** - Leave it as is.
 
 ## Decision Outcome
