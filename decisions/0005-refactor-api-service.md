@@ -3,10 +3,11 @@
 ## Context and Problem Statement
 
 The `ApiService` currently handles _all_ API requests. This has resulted in the
-class evolving into a Bloater, and as of right now consists of 2021 lines of
-code, and has 268 methods. Additionally, since it knows everything related to the
-servers it also needs to import every request and response which nessesates that
-the `ApiService` and request/responses are put in the same npm package.
+class evolving into a Bloater, and as of right now consists of **2021** lines
+of code, and has **268** methods. Additionally, since it knows everything
+related to the servers it also needs to import every request and response which
+nessesates that the `ApiService` and request/responses are put in the same npm
+package.
 
 ## Considered Options
 
