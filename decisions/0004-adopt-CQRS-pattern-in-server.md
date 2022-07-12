@@ -20,7 +20,7 @@ The two above facts mean that our Entities cannot act without receiving all nece
 
 Chosen option: **Commands**
 
-Commands seem all-around the better decision to the incumbent. We gain code reuse and limit class scope. In addition, we have an iterative path to a full-blown CQRS pipeline, with queued work.
+Commands seem all-around the better decision to the incumbent. We gain code reuse and limit class scope. In addition, we have an iterative path to a full-blown CQRS pipeline, with queued work. Queries are already basically done through repositories and/or services, but would require some restructuring to be obvious.
 
 ### Positive Consequences <!-- optional -->
 
