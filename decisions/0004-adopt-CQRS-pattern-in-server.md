@@ -12,7 +12,7 @@ The two above facts mean that our Entities cannot act without receiving all nece
 
 ## Considered Options
 
-- **\<\<Entity\>\>Services** - Discussed above
+- **`<<Entity>>Services`** - Discussed above
 - **Commands** - Fundamentally our problem is that the <<Entity>>Service name encapsulates absolutely anything you can do with that entity and excludes any code reuse across different entities. The command pattern creates command classes based on the action being taken on the entity. This naturally limits the classes scope and allows for reuse should two entities need to implement the same command behavior. https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs
 - **Small Feature-based services** - This design would break \<\<Entity\>\>Service into \<\<Feature\>\>Service, but ultimately runs into the same problems. As a feature grows, this service would become bloated and tightly coupled to other services.
 
