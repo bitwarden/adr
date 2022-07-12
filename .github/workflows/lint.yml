@@ -1,0 +1,26 @@
+---
+name: Lint
+
+on: push
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  lint:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@a12a3943b4bdde767164f792f33f40b04645d846 # v3.0.0
+
+      - name: Set up Python
+        uses: actions/setup-python@c4e89fac7e8767b327bbad6cb4d859eda999cf08 # 4.1.0
+        with:
+          python-version: 3.x
+
+      - name: Linting
+        run: |
+          pip install pre-commit
+          pre-commit run --all-files
