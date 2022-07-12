@@ -11,7 +11,8 @@ ensure a more consistent experience for developers and users.
 
 ## Considered Options
 
-- **Reactive forms** - Provide direct, explicit access to the underlying forms object model.   Compared to template-driven forms, they are more robust: they're more scalable, reusable, and
+- **Reactive forms** - Provide direct, explicit access to the underlying forms object model.
+  Compared to template-driven forms, they are more robust: they're more scalable, reusable, and
   testable. If forms are a key part of your application, or you're already using reactive patterns
   for building your application, use reactive forms.
 - **Template-driven forms** - Rely on directives in the template to create and manipulate the
