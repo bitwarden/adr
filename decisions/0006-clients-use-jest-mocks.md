@@ -1,4 +1,4 @@
-# Deprecate Substitute mocking library
+# Clients: Use Jest Mocks
 
 ## Context and Problem Statement
 
