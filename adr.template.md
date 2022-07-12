@@ -6,15 +6,15 @@
 
 ## Considered Options
 
-* **Enumerate solutions considered** - with a brief description of the solution and links to reference materials 
+- **Enumerate solutions considered** - with a brief description of the solution and links to
+  reference materials
 
 ## Decision Outcome
 
-Chosen option: **The enumerated name of the option** <!-- optional: brief reason for decision **or** the positive/negative consequences sections below -->
+Chosen option: **The enumerated name of the option**
 
+<!-- optional: brief reason for decision **or** the positive/negative consequences sections below -->
 
 ### Positive Consequences <!-- optional -->
 
-
 ### Negative Consequences <!-- optional -->
-
