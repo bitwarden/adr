@@ -4,10 +4,10 @@
 
 Many of our components and services are tightly coupled towards the state of
 different domains. This results in tight coupling and difficulty in modifying
-the different areas. Which has lead to `MessagingService` service being used to
+the different areas. This has lead to `MessagingService` service being used to
 synchronize state updates by sending events. While event sourcing is a perfectly
-valid way of developing software, our current events are empty resultin in the 
-components re-fetch their state manually.
+valid way of developing software, our current events are empty, which results in the 
+components re-fetching their state manually.
 
 ## Considered Options
 
