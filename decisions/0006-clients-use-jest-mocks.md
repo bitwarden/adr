@@ -2,8 +2,6 @@
 
 ## Context and Problem Statement
 
-<!-- Give a background of the problem this ADR addresses as well as a history of previous attempts to fix, if known -->
-
 We currently use [Substitute](https://www.npmjs.com/package/@fluffy-spoon/substitute) to create
 mocks in our tests. This includes matching arguments, mocking return values, and spying on calls.
 However, we also use Jest, which comes with its own mocking, spying and matching functions. This
