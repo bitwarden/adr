@@ -70,7 +70,11 @@ reports
   reports
     breach-report.component
     ...
-  reports.module.ts
+  reports.module.ts -> depends on reports-shared.module.ts
   reports.component.ts
   index.ts
+
+organizations
+  reports
+    organization-reports.module.ts -> depends on reports-shared.module.ts
 ```
