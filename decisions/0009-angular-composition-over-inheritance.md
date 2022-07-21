@@ -18,14 +18,12 @@ encourages large page-level components.
 
 Chosen option: **Prefer composition over inheritance**
 
-<!-- optional: brief reason for decision **or** the positive/negative consequences sections below -->
-
-### Positive Consequences <!-- optional -->
+### Positive Consequences
 
 - Thinner components
 - Better understanding of the impact a change has since it will now be isolated to a single
   component only.
 
-### Negative Consequences <!-- optional -->
+### Negative Consequences
 
 - Inheritance tends to be well understood.
