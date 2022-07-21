@@ -22,7 +22,7 @@ Chosen option: **Define a public module using index.ts**.
 ### Positive Consequences <!-- optional -->
 
 - The public module is defined.
-- Imports can be keept cleaner since not every file needs to be manually imported.
+- Imports can be kept cleaner since not every file needs to be manually imported.
 - Safety in knowing that a change is isolated to the package.
 
 ### Negative Consequences <!-- optional -->
