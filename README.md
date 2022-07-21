@@ -19,16 +19,16 @@ The AD will also serve as a base for proposing and planning technical debt.
 The table contains all current ADRs, and includes tags to simplify locating topics. Please ensure
 each ADR contains at least which projects they apply to (_clients_, _mobile_ and/or _server_).
 
-| ID  | Title                                                                                        | Tags    |
-| --- | -------------------------------------------------------------------------------------------- | ------- |
-| 1   | [Use Angular Reactive Forms](./decisions/0001-reactive-forms.md)                             | clients |
-| 2   | [Define public module in NPM packages](./decisions/0002-public-module-npm-packages.md)       | clients |
-| 3   | [Adopt Observable Data Services for Angular](./decisions/0003-observable-data-services.md)   | clients |
-| 4   | [Refactor State Service](./decisions/0004-refactor-state-service.md)                         | clients |
-| 5   | [Refactor Api Service](./decisions/0005-refactor-api-service.md)                             | clients |
-| 6   | [Use Jest Mocks](./decisions/0006-clients-use-jest-mocks.md)                                 | clients |
-| 7   | [Manifest v3 Browser memory caching](./decisions/0007-manifest-v3-browser-memory-caching.md) | clients |
-| 8   | [Adopt CQRS pattern in server](./decisions/0008-adopt-CQRS-pattern-in-server.md)             | server  |
+| ID  | Title                                                                                        | Status      | Tags    |
+| --- | -------------------------------------------------------------------------------------------- | ----------- | ------- |
+| 1   | [Use Angular Reactive Forms](./decisions/0001-reactive-forms.md)                             | In progress | clients |
+| 2   | [Define public module in NPM packages](./decisions/0002-public-module-npm-packages.md)       | In progress | clients |
+| 3   | [Adopt Observable Data Services for Angular](./decisions/0003-observable-data-services.md)   | In progress | clients |
+| 4   | [Refactor State Service](./decisions/0004-refactor-state-service.md)                         | In progress | clients |
+| 5   | [Refactor Api Service](./decisions/0005-refactor-api-service.md)                             | In progress | clients |
+| 6   | [Use Jest Mocks](./decisions/0006-clients-use-jest-mocks.md)                                 | In progress | clients |
+| 7   | [Manifest v3 Browser memory caching](./decisions/0007-manifest-v3-browser-memory-caching.md) | In progress | clients |
+| 8   | [Adopt CQRS pattern in server](./decisions/0008-adopt-CQRS-pattern-in-server.md)             | In progress | server  |
 
 ## Process
 

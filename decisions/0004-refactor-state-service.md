@@ -1,3 +1,6 @@
+---
+status: In progress
+---
 # Refactor State Service
 
 ## Context and Problem Statement
