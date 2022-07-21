@@ -71,4 +71,6 @@ reports
     breach-report.component
     ...
   reports.module.ts
+  reports.component.ts
   index.ts
+```
