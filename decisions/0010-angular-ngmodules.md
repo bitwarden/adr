@@ -50,6 +50,25 @@ Chosen option: **Angular Modules**
 - Aim to export as few components as possible. In many cases you don't need to export any components
   at all, and can instead encapsulate the routing within that module which allows for it to be lazy
   loaded should it be deemed useful.
-- Functionality that needs to be shared across all features should be placed in the `SharedFeature`.
-- Consider creating a `FeatureShared` module in case additional functionality needs to be shared
+- Functionality that needs to be shared across all modules should be placed in the `Shared` feature.
+- Consider creating a `feature/shared` module in case additional functionality needs to be shared
   between modules such as the _Individual Vault_ and _Organization Vault_.
+
+### Implementation
+
+An example of a feature module would be the **reports**. We know that reports are used both for the
+individual users and for organizations.
+
+```
+reports
+  shared
+    report-card.component
+    report-list.component
+
+    reports-shared.module.ts
+    index.ts
+  reports
+    breach-report.component
+    ...
+  reports.module.ts
+  index.ts
