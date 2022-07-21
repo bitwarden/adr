@@ -1,75 +1,89 @@
-# Adopt a Scalable File Structure For Angular Clients
+# Scalable Angular Clients folder structure
 
-## Issue
+## Context and Problem Statement
 
-Currently code blocks in our Angular clients are defined using Angular Components (e.g
-ciphersComponent, vaultComponent). Many of these code blocks have outgrown this level of
-abstraction, and would benefit greatly from having access to their own child components, models,
-services, pipes, and other structures. Likewise, many of these components share functionality with
-other components in scattered areas across the file system, leading to long imports for inheritance
-at best and redundant code at worst (e.g the CiphersComponent and
-OrganizationCiphersComponentComponent).
+We currently have a very fractured folder structure in the Angular clients with multiple competing
+folder structures. We need to standardize on a single folder structure which will allow us to
+continue growing without friction. This ADR builds upon
+[0010 Use Angular Modules](./0010-angular-ngmodules.md) and proposes a folder structure.
 
-Fixing this issue is a multi part effort. This ADR will cover one core piece of the solution: how
-the file structure of our Angular clients can be refactored to clearly isolate and scale code
-blocks.
+### Resources
+
+This is heavily based on the following resources.
+
+- [Angular - NgModules](https://angular.io/guide/ngmodules)
+- [Angular - Application structure and NgModules](https://angular.io/guide/styleguide#application-structure-and-ngmodules)
+- [Angular - Lazy-loading feature modules](https://angular.io/guide/lazy-loading-ngmodules)
+- [Using Nx at Enterprises](https://nx.dev/guides/monorepo-nx-enterprise)
 
 ## Considered Options
 
-There are many patterns in use to get this job done, so I will just share what I would like for it
-to look like.
+- **Nx folder structure** - Seems like a well thought out structure but it essentially requires that
+  we use nx since it relies heavily on npm packages. We're not yet at a stage where we feel
+  comfortable adopting such a tool.
+- **Lightweight structure inspired by Angular Docs** - Takes inspiration from the Angular docs + Nx
+  to propose a more lightweight structure that still keeps the features in the `app` directory.
+
+### `SharedModule` & `CoreModule`
+
+The [Angular docs](https://angular.io/guide/module-types#shared-ngmodules) specifies that there
+should be a `SharedModule`. It further specifies that the shared module should not provide
+providers. A common convention is to create a `CoreModule` which is responsible for setting up the
+core providers.
+
+### Proposed Folder structure
+
+This folder structure is based on our existing routing structure, since a common pattern is to use
+modules for nested routes in order to support lazy loading. The root folders are mostly based on the
+root routing concepts we have, with various public routes being categorized under `accounts`.
 
 ```
 web/src/app
-    modules
-        feature (i.e vault-filters)
-            shared (if servicing multiple modules)
-                feature.module.ts
-                feature.service.ts
-            components (for child components. This pattern will be commonly used for large components i.e VaultFiltersModule.
-            services
-                feature.forms.service.ts
-            models
-            feature.module.ts (or sub-folders if servicing multiple features)
-            feature.component.ts
+  core
     services
-        services.module.ts
-        {reactiveService}.service (reactive services that handle UI updates. i.e a collapsedFilterNodes.service that pushes updates to and from VaultFiltersComponent and StateService. This would establish a pattern like 0003, but for manipulating the UI).
-        {rootLevelService}.service (the services that already exist here)
+    core.module.ts
+    index.ts
+  shared
     pipes
-    guards
-    app.component.html
-    app.component.ts
-    app.module
-    main.ts
-    oss-routing.module.ts
-    oss.module.ts
-    polyfills.ts
-    wildcard-routing.module.ts
+    components
+    shared.module.ts
+    index.ts
+
+  accounts
+  providers
+  reports
+  sends
+  settings
+  tools
+  vault
+    shared
+      vault-shared.module.ts (this gets imported by Organization Vaults)
+    vault.module.ts
+    index.ts (exposes the following files:)
+      vault-shared.module.ts
+      vault.module.ts
+  --
+  app.component.html
+  app.component.ts
+  app.module
+  oss-routing.module.ts
+  oss.module.ts
+  wildcard-routing.module.ts
 ```
+
+An argument could be made that the root feature modules should be placed under a `features`
+directory or something similar. However at this stage the number of directories we have is still
+maintainable and nesting things one step further would further indent the editor navigator. Thanks
+to the use of barrel files and angular modules such a change can be easily adopted at a later stage.
+
+This structure will be implemented in multiple steps.
+
+1. Extract unrelated files from `src/app`. https://github.com/bitwarden/clients/pull/3127
+2. Create `CoreModule`.
+3. Create `SharedModule`.
+4. Migrate all existing loose components to `SharedModule`.
+   - Any remaining functionality in root should provide a module.
 
 ### Decision Outcome
 
 Implementing a file structure modeled after the above example.
-
-### Pros
-
-- This structure is very scalable, each module can grow and shrink at its own pace without
-  disturbing others. There are patterns baked in to the file structure to aid many different growth
-  related needs.
-- There is a clear hierarchy of classes.
-- Modules can easily manage their own services, pipes, and children.
-- Decouple parents from their children. No more ViewChilds, as we will be using reactive services to
-  handle communication between components.
-
-### Cons
-
-- This structure can quickly get very deep, and may in fact look that way for us for a period of
-  time. It's important to remember that the structual folders (`modules`, `components`, `services`)
-  are guard rails for developers. They offer clear boxes for where to put classes based on what the
-  class does, and can be infinetly nested without breaking the pattern. If we move components to
-  this structure and they are deeply nested (many iterations of a `modules` folder) that is a code
-  smell and an indicator that we should reduce the redundancy of those features, or split them out
-  from each other completely. It's also worth mentioning that our existing structure is very nested,
-  as we build a complicated product.
-- This is a major structure change that will need to happen iteritvly
