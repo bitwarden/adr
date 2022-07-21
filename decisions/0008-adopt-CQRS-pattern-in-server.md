@@ -1,6 +1,7 @@
 ---
 status: In progress
 ---
+
 # Adopt CQRS pattern in Server
 
 ## Context and Problem Statement

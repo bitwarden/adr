@@ -1,6 +1,7 @@
 ---
 status: In progress
 ---
+
 # Define public module in NPM packages
 
 ## Context and Problem Statement

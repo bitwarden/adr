@@ -1,6 +1,7 @@
 ---
 status: In progress
 ---
+
 # Use decorator to maintain synchronization of instance observable and session memory storage
 
 ## Context and Problem Statement
