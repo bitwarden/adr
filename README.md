@@ -16,8 +16,7 @@ The AD will also serve as a base for proposing and planning technical debt.
 
 ## ADRs
 
-The table contains all current ADRs, and includes tags to simplify locating topics. Please ensure
-each ADR contains at least which projects they apply to (_clients_, _mobile_ and/or _server_).
+The table contains all current ADRs, and includes tags to simplify locating topics.
 
 | ID  | Title                                                                                        | Status      | Tags    |
 | --- | -------------------------------------------------------------------------------------------- | ----------- | ------- |
@@ -29,6 +28,17 @@ each ADR contains at least which projects they apply to (_clients_, _mobile_ and
 | 6   | [Use Jest Mocks](./decisions/0006-clients-use-jest-mocks.md)                                 | In progress | clients |
 | 7   | [Manifest v3 Browser memory caching](./decisions/0007-manifest-v3-browser-memory-caching.md) | In progress | clients |
 | 8   | [Adopt CQRS pattern in server](./decisions/0008-adopt-CQRS-pattern-in-server.md)             | In progress | server  |
+
+### Status definition
+
+- **In progress** - ADR is ratified and we are in progress of adopting it across the project(s).
+- **Standard** - ADR is implemented and assumed to be standard.
+- **Abandoned** - ADR is abandoned, and/or replaced by another ADR.
+
+### Tags
+
+Please ensure each ADR contains a tag marking which projects they apply to (_clients_, _mobile_
+and/or _server_). Feel free to create more tags should the need arise.
 
 ## Process
 
