@@ -8,9 +8,9 @@ decision on features (e.g., infinite undo vs. limited undo).
 
 ## @Bitwarden
 
-The goal of introducing Architectural Decisions in the engineering team at Bitwarden is to steer
-development towards a maintainable and expandable code base. While at the same time striving for
-uniformity across all pods.
+The goal of introducing Architectural Decisions (AD) in the engineering team at Bitwarden is to
+steer development towards a maintainable and expandable code base. While at the same time striving
+for uniformity across all pods.
 
 The AD will also serve as a base for proposing and planning technical debt.
 
