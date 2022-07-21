@@ -79,7 +79,7 @@ to the use of barrel files and angular modules such a change can be easily adopt
 This structure will be implemented in multiple steps.
 
 1. Extract unrelated files from `src/app`. https://github.com/bitwarden/clients/pull/3127
-2. Create `CoreModule`.
+2. Create `CoreModule`. https://github.com/bitwarden/clients/pull/3149
 3. Create `SharedModule`.
 4. Migrate all existing loose components to `SharedModule`.
    - Any remaining functionality in root should provide a module.
