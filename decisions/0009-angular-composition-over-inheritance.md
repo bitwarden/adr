@@ -4,8 +4,8 @@
 
 We currently rely heavily on inheritance for our Angular applications. While this seemed like a
 natural decision at the time since it allowed us to quickly share code between different areas. It
-has also lead to tight coupling, difficulty in understanding the impact a change will have. It also
-encourages large page-level components.
+has also lead to tight coupling and therefore difficulty in understanding the impact a change will
+have. It also encourages large page-level components.
 
 ## Considered Options
 
