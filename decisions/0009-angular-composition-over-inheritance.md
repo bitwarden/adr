@@ -1,3 +1,7 @@
+---
+status: In progress
+---
+
 # Angular - Composition over inheritance
 
 ## Context and Problem Statement
