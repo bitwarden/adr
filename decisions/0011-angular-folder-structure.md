@@ -1,3 +1,7 @@
+---
+status: In progress
+---
+
 # Scalable Angular Clients folder structure
 
 ## Context and Problem Statement
@@ -70,11 +74,6 @@ web/src/app
   oss.module.ts
   wildcard-routing.module.ts
 ```
-
-An argument could be made that the root feature modules should be placed under a `features`
-directory or something similar. However at this stage the number of directories we have is still
-maintainable and nesting things one step further would further indent the editor navigator. Thanks
-to the use of barrel files and angular modules such a change can be easily adopted at a later stage.
 
 This structure will be implemented in multiple steps.
 
