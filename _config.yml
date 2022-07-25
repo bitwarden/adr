@@ -2,12 +2,19 @@ repository: bitwarden/adr
 title: "Bitwarden ADRs"
 theme: just-the-docs
 color_scheme: light
-url: "http://localhost:4005"
+
+plugins:
+  - jekyll-readme-index
 
 # Hint by https://github.com/just-the-docs/just-the-docs/issues/374#issuecomment-680273258
 # Theme read from https://github.com/StylishThemes/Syntax-Themes/blob/master/pygments/css-github/
 # Browse alternative themes at https://stylishthemes.github.io/Syntax-Themes/pygments/
 highlight_theme: jellybeans
+
+readme_index:
+  enabled:          true
+  remove_originals: true
+  with_frontmatter: true
 
 search_enabled: true
 button: true
@@ -19,7 +26,3 @@ gh_edit_link_text: "Edit this page on GitHub."
 gh_edit_repository: "https://github.com/bitwarden/adr/"
 gh_edit_branch: "master"
 gh_edit_view_mode: "edit"
-
-# ga_tracking: UA-5555555-55
-# ga_tracking_anonymize_ip: true
-
