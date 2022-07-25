@@ -12,7 +12,7 @@ plugins:
 highlight_theme: jellybeans
 
 readme_index:
-  enabled:          true
+  enabled: true
   remove_originals: true
   with_frontmatter: true
 
