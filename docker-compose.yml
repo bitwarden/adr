@@ -1,0 +1,14 @@
+version: "3"
+services:
+  jekyll:
+    image: jekyll/jekyll:3.8
+    environment:
+      - JEKYLL_ENV=docker
+    command:
+      bundle exec jekyll serve --config _config.yml,_config_dev.yml --watch --host 0.0.0.0 --port
+      4005 --force_polling
+    ports:
+      - 4005:4005
+    volumes:
+      - .:/srv/jekyll:cached
+      - ./vendor/bundle:/usr/local/bundle:cached

@@ -1,4 +1,7 @@
 ---
+parent: Decisions
+adr: "0003"
+nav_order: 3
 status: In progress
 ---
 
@@ -39,7 +42,7 @@ class OrganizationService {
   private _organizations: new BehaviorSubject<Organization[]>([]);
   organizations$: Observable<Organization[]> = this._organizations$.asObservable();
 
-  async save(organizations: { [id: string]: OrganizationData }) {
+  async save(organizations: { [adr: string]: OrganizationData }) {
     await this._organizations$.next(await this.decryptOrgs(this._activeAccount, organizations));
   }
 }

@@ -1,4 +1,7 @@
 ---
+parent: Decisions
+adr: "0008"
+nav_order: 8
 status: In progress
 ---
 

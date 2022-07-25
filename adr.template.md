@@ -1,3 +1,10 @@
+---
+nav_order: 3
+---
+
+# ADR Template
+
+```
 # Name of ADR
 
 ## Context and Problem Statement
@@ -18,3 +25,4 @@ Chosen option: **The enumerated name of the option**
 ### Positive Consequences <!-- optional -->
 
 ### Negative Consequences <!-- optional -->
+```

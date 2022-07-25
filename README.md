@@ -1,3 +1,7 @@
+---
+nav_order: 1
+---
+
 # Bitwarden Architectural Decision Records
 
 An [Architectural Decision (AD)][ad] is a software design choice that addresses a functional or
@@ -13,24 +17,6 @@ steer development towards a maintainable and expandable code base. While at the 
 for uniformity across all pods.
 
 The AD will also serve as a base for proposing and planning technical debt.
-
-## ADRs
-
-The table contains all current ADRs, and includes tags to simplify locating topics.
-
-| ID  | Title                                                                                        | Status      | Tags    |
-| --- | -------------------------------------------------------------------------------------------- | ----------- | ------- |
-| 1   | [Use Angular Reactive Forms](./decisions/0001-reactive-forms.md)                             | In progress | clients |
-| 2   | [Define public module in NPM packages](./decisions/0002-public-module-npm-packages.md)       | In progress | clients |
-| 3   | [Adopt Observable Data Services for Angular](./decisions/0003-observable-data-services.md)   | In progress | clients |
-| 4   | [Refactor State Service](./decisions/0004-refactor-state-service.md)                         | In progress | clients |
-| 5   | [Refactor Api Service](./decisions/0005-refactor-api-service.md)                             | In progress | clients |
-| 6   | [Use Jest Mocks](./decisions/0006-clients-use-jest-mocks.md)                                 | In progress | clients |
-| 7   | [Manifest v3 Browser memory caching](./decisions/0007-manifest-v3-browser-memory-caching.md) | In progress | clients |
-| 8   | [Adopt CQRS pattern in server](./decisions/0008-adopt-CQRS-pattern-in-server.md)             | In progress | server  |
-| 9   | [Composition over inheritance](./decisions/0009-angular-composition-over-inheritance.md)     | In progress | clients |
-| 10  | [Use Angular Modules](./decisions/0010-angular-ngmodules.md)                                 | In progress | clients |
-| 11  | [Angular Folder Structure](./decisions/0011-angular-folder-structure.md)                     | In progress | clients |
 
 ### Status definition
 
@@ -62,3 +48,13 @@ contributing.
 [slf4j]: https://www.slf4j.org/
 [java.util.logging]:
   https://docs.oracle.com/javase/8/docs/api/java/util/logging/package-summary.html
+
+## Jekyll
+
+```
+# Setup bundle
+docker compose run jekyll bundle install
+
+# Start dockerized Jekyll
+docker compose up
+```

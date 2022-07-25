@@ -1,4 +1,7 @@
 ---
+parent: Decisions
+adr: "0004"
+nav_order: 4
 status: In progress
 ---
 
@@ -47,7 +50,7 @@ interface StateService {
 const StorageKey = "organizations";
 
 class Organization {
-  async save(organizations: { [id: string]: OrganizationData }) {
+  async save(organizations: { [adr: string]: OrganizationData }) {
     await this._stateService.saveAccountData(this._activeAccount, StorageKey, organizations);
     await this._organizations$.next(await this.decryptOrgs(this._activeAccount, organizations));
   }
