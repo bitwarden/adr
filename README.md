@@ -28,6 +28,7 @@ The table contains all current ADRs, and includes tags to simplify locating topi
 | 6   | [Use Jest Mocks](./decisions/0006-clients-use-jest-mocks.md)                                 | In progress | clients |
 | 7   | [Manifest v3 Browser memory caching](./decisions/0007-manifest-v3-browser-memory-caching.md) | In progress | clients |
 | 8   | [Adopt CQRS pattern in server](./decisions/0008-adopt-CQRS-pattern-in-server.md)             | In progress | server  |
+| 9   | [Composition over inheritance](./decisions/0009-angular-composition-over-inheritance.md)     | In progress | clients |
 | 10  | [Use Angular Modules](./decisions/0010-angular-ngmodules.md)                                 | In progress | clients |
 
 ### Status definition
