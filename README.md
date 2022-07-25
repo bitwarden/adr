@@ -29,6 +29,7 @@ The table contains all current ADRs, and includes tags to simplify locating topi
 | 7   | [Manifest v3 Browser memory caching](./decisions/0007-manifest-v3-browser-memory-caching.md) | In progress | clients |
 | 8   | [Adopt CQRS pattern in server](./decisions/0008-adopt-CQRS-pattern-in-server.md)             | In progress | server  |
 | 9   | [Composition over inheritance](./decisions/0009-angular-composition-over-inheritance.md)     | In progress | clients |
+| 10  | [Use Angular Modules](./decisions/0010-angular-ngmodules.md)                                 | In progress | clients |
 | 11  | [Angular Folder Structure](./decisions/0011-angular-folder-structure.md)                     | In progress | clients |
 
 ### Status definition
