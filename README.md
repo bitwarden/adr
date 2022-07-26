@@ -4,6 +4,9 @@ nav_order: 1
 
 # Bitwarden Architectural Decision Records
 
+You may browse the ADRs in a more readable format at
+[https://adr.bitwarden.com](https://adr.bitwarden.com).
+
 An [Architectural Decision (AD)][ad] is a software design choice that addresses a functional or
 non-functional requirement that is architecturally significant. This might, for instance, be a
 technology choice (e.g., Java vs. JavaScript), a choice of the IDE (e.g., IntelliJ vs. Eclipse IDE),

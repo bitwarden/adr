@@ -1,8 +1,9 @@
 ---
 parent: Decisions
-adr: "0009"
 nav_order: 9
+adr: "0009"
 status: In progress
+date: 2022-07-25
 ---
 
 # Angular - Composition over inheritance

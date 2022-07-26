@@ -1,8 +1,9 @@
 ---
 parent: Decisions
-adr: "0007"
 nav_order: 7
+adr: "0007"
 status: In progress
+date: 2022-07-12
 ---
 
 # Use decorator to maintain synchronization of instance observable and session memory storage

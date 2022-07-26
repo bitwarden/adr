@@ -1,8 +1,9 @@
 ---
 parent: Decisions
-adr: "0008"
 nav_order: 8
+adr: "0008"
 status: In progress
+date: 2022-07-15
 ---
 
 # Adopt CQRS pattern in Server

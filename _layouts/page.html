@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+{% if page.adr %}
+<div class="page-tags">
+  <dl>
+    <dt>ID</dt>
+    <dd><strong>ADR-{{page.adr}}</strong></dd>
+    <dt>Status</dt>
+    <dd><span class="label label-green" style="margin: 0">{{page.status}}</span></dd>
+    <dt>Published</dt>
+    <dd>{{page.date}}</dd>
+  </dl>
+</div>
+{% endif %}
+
+{{ content }}

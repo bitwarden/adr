@@ -1,8 +1,9 @@
 ---
 parent: Decisions
-adr: "0001"
 nav_order: 1
+adr: "0001"
 status: In progress
+date: 2022-05-28
 ---
 
 # Use Angular Reactive Forms

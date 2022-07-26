@@ -6,9 +6,10 @@ services:
       - JEKYLL_ENV=docker
     command:
       bundle exec jekyll serve --config _config.yml,_config_dev.yml --watch --host 0.0.0.0 --port
-      4005 --force_polling
+      4005 --force_polling --livereload
     ports:
       - 4005:4005
+      - 35729:35729
     volumes:
       - .:/srv/jekyll:cached
       - ./vendor/bundle:/usr/local/bundle:cached

@@ -2,6 +2,7 @@ repository: bitwarden/adr
 title: "Bitwarden ADRs"
 theme: just-the-docs
 color_scheme: light
+markdown: CommonMarkGhPages
 
 plugins:
   - jekyll-readme-index

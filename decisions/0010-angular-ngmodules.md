@@ -1,8 +1,9 @@
 ---
 parent: Decisions
-adr: "0010"
 nav_order: 10
+adr: "0010"
 status: In progress
+date: 2022-07-25
 ---
 
 # Use Angular Modules
