@@ -1,8 +1,9 @@
 ---
 parent: Decisions
-adr: "0003"
 nav_order: 3
+adr: "0003"
 status: In progress
+date: 2022-06-30
 ---
 
 # Adopt Observable Data Services for Angular

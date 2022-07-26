@@ -1,8 +1,9 @@
 ---
 parent: Decisions
-adr: "0011"
 nav_order: 11
+adr: "0011"
 status: In progress
+date: 2022-07-25
 ---
 
 # Scalable Angular Clients folder structure

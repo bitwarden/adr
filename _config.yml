@@ -2,6 +2,7 @@ repository: bitwarden/adr
 title: "Bitwarden ADRs"
 theme: just-the-docs
 color_scheme: light
+markdown: CommonMarkGhPages
 
 plugins:
   - jekyll-readme-index
@@ -15,6 +16,9 @@ readme_index:
   enabled: true
   remove_originals: true
   with_frontmatter: true
+
+commonmark:
+  options: ["UNSAFE", "SMART", "FOOTNOTES"]
 
 search_enabled: true
 button: true

@@ -1,8 +1,9 @@
 ---
 parent: Decisions
-adr: "0002"
 nav_order: 2
+adr: "0002"
 status: In progress
+date: 2022-06-02
 ---
 
 # Define public module in NPM packages

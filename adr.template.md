@@ -4,7 +4,7 @@ nav_order: 3
 
 # ADR Template
 
-```
+```text
 # Name of ADR
 
 ## Context and Problem Statement
