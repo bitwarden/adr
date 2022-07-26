@@ -67,7 +67,7 @@ Chosen option: **Angular Modules**
 An example of a feature module would be the **reports**. We know that reports are used both for the
 individual users and for organizations.
 
-```
+```text
 reports
   shared
     report-card.component

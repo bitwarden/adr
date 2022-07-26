@@ -45,7 +45,7 @@ This folder structure is based on our existing routing structure, since a common
 modules for nested routes in order to support lazy loading. The root folders are mostly based on the
 root routing concepts we have, with various public routes being categorized under `accounts`.
 
-```
+```text
 web/src/app
   core
     services
