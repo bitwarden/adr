@@ -54,7 +54,7 @@ contributing.
 
 ## Jekyll
 
-```
+```bash
 # Setup bundle
 docker compose run jekyll bundle install
 
