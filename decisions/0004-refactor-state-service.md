@@ -4,6 +4,7 @@ nav_order: 4
 adr: "0004"
 status: In progress
 date: 2022-06-30
+tags: [clients, angular]
 ---
 
 # Refactor State Service

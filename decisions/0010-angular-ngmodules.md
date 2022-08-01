@@ -4,9 +4,10 @@ nav_order: 10
 adr: "0010"
 status: In progress
 date: 2022-07-25
+tags: [clients, angular]
 ---
 
-# Use Angular Modules
+# Angular Modules
 
 ## Context and Problem Statement
 

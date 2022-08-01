@@ -4,9 +4,10 @@ nav_order: 9
 adr: "0009"
 status: In progress
 date: 2022-07-25
+tags: [clients, angular]
 ---
 
-# Angular - Composition over inheritance
+# Composition over inheritance
 
 ## Context and Problem Statement
 

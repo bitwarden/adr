@@ -4,9 +4,10 @@ nav_order: 2
 adr: "0002"
 status: In progress
 date: 2022-06-02
+tags: [clients]
 ---
 
-# Define public module in NPM packages
+# Public API for modules
 
 ## Context and Problem Statement
 

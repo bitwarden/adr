@@ -4,6 +4,7 @@ nav_order: 6
 adr: "0006"
 status: In progress
 date: 2022-07-18
+tags: [clients, tests]
 ---
 
 # Clients: Use Jest Mocks

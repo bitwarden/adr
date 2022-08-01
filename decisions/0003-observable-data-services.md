@@ -4,6 +4,7 @@ nav_order: 3
 adr: "0003"
 status: In progress
 date: 2022-06-30
+tags: [clients, angular]
 ---
 
 # Adopt Observable Data Services for Angular
