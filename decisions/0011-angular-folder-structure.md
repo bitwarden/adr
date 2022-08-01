@@ -1,9 +1,11 @@
 ---
+title: Angular folder structure
 parent: Decisions
 nav_order: 11
 adr: "0011"
 status: In progress
 date: 2022-07-25
+tags: [clients, angular]
 ---
 
 # Scalable Angular Clients folder structure
