@@ -10,7 +10,7 @@ insert_final_newline = true
 max_line_length = 100
 
 # Set default charset
-[*.{js,ts,scss,html}]
+[*.{js,ts,scss,html,md}]
 charset = utf-8
 indent_style = space
 indent_size = 2
