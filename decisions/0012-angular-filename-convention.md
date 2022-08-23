@@ -33,4 +33,4 @@ Use the **Angular coding style guide**.
 
 ### Negative Consequences <!-- optional -->
 
-We need to update a lot of files to be consistent.
+- We need to update a lot of files to be consistent.
