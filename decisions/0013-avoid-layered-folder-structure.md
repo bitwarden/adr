@@ -29,7 +29,7 @@ modifying services often requires modifying the models belonging to that service
 
 ### Decision Outcome
 
-Use the **Place models next to their owner**.
+Use the **Place models next to their owner** for request and response models.
 
 ### Example
 
