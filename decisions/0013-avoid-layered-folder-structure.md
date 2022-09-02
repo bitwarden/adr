@@ -8,7 +8,7 @@ date: 2022-09-02
 tags: [clients, angular]
 ---
 
-# Avoid layered folder structure
+# Avoid layered folder structure for request/response models
 
 ## Context and Problem Statement
 
