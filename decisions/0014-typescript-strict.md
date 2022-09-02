@@ -63,6 +63,21 @@ Chosen option: **Progressively enable strict flag**.
 - Might lead to false security if a file is strict but uses non-strict dependencies.
 - Few best practices.
 
+### Files to be updated
+
+- libs/common: 310
+  - models: 174
+  - services: 40
+  - abstractions: 45
+- libs/angular: 64
+- libs/node: 11
+- libs/electron: 10
+- apps: 309
+  - web: 163
+  - browser: 80
+  - desktop: 30
+  - cli: 36
+
 ### Plan
 
 There are several potential pitfalls related to progressively enabling strict mode. Which will
@@ -81,7 +96,7 @@ all files which produce a strict error.
 1. Migrate `libs/common/models`.
 2. Migrate `libs/common/services` and `libs/common/abstractions`.
 3. Migrate remaining `libs/common`.
-4. Migrate `libs/angular` & `libs/node`.
+4. Migrate `libs/angular`.
 5. Migrate apps. (And forbid anyone from adding new non-strict files)
 
 ### Guidelines
@@ -93,6 +108,9 @@ Below are some helpful guidelines for migrating files to strict mode.
 The `strictNullChecks` flag essentially requires that we add `| null` to almost all our types. This
 is quite annoying and a better approach is to use `undefined` instead. Which allows us to use the
 `?` operator to define the fields as optional. This essentially adds a `| undefined` to the type.
+
+For some additional context behind this discussion, please read
+[Guidelines for choosing between `null` and `undefined` with `strictNullChecks` · Issue #9653 · microsoft/TypeScript](https://github.com/microsoft/TypeScript/issues/9653).
 
 [null]: https://www.typescriptlang.org/tsconfig#strictNullChecks
 [plugin]: https://github.com/allegro/typescript-strict-plugin
