@@ -5,6 +5,15 @@ nav_order: 3
 # ADR Template
 
 ```text
+---
+parent: Decisions
+nav_order: <id>
+adr: "<id>"
+status: In progress
+date: 2022-07-15
+tags: [server]
+---
+
 # Name of ADR
 
 ## Context and Problem Statement
