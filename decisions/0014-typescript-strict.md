@@ -27,9 +27,6 @@ Of particular note is the [Strict Null Checks][null]. By default TypeScript will
 `null` and `undefined` allowing them to be used for any types. When `strictNullChecks` are enabled
 they must be explicitly allowed in the type definition.
 
-We are at a certain scale where enforcing more robust coding practices and standardization is more
-of a priority that it's worth raising this topic again.
-
 ### Typescript strict mode plugin
 
 The [Typescript strict mode plugin][plugin] is a TypeScript plugin that allows you to progressively
@@ -111,6 +108,42 @@ is quite annoying and a better approach is to use `undefined` instead. Which all
 
 For some additional context behind this discussion, please read
 [Guidelines for choosing between `null` and `undefined` with `strictNullChecks` · Issue #9653 · microsoft/TypeScript](https://github.com/microsoft/TypeScript/issues/9653).
+
+##### Use find references / search
+
+During the migration strict mode will only be allowed on a subset of the files. This means that
+changing the interface from null to undefined may result in places that still use undefined. Please
+double check that null is removed to ensure the expected behavior.
+
+#### Avoid making non-optional fields optional
+
+It may be tempting to just add a `?` to all fields while migrating the code. Please think carefully
+wether the field should actually be optional or not. Arrays for example should almost never be
+`undefined` and a more sensible default is `[]`.
+
+#### Use optional chaining
+
+Take advantage of optional chaining to avoid null checks. Optional chaining allows you to rewire the
+following code.
+
+```ts
+// Avoid
+if (obj == null || obj.field == null) {
+  return false;
+}
+return true;
+
+// Prefer
+return obj?.field != null;
+```
+
+#### Use Nullish coalescing operator (`??`)
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
+
+```ts
+const foo = null ?? "default string";
+```
 
 [null]: https://www.typescriptlang.org/tsconfig#strictNullChecks
 [plugin]: https://github.com/allegro/typescript-strict-plugin
