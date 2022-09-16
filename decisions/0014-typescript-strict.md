@@ -79,9 +79,10 @@ Chosen option: **Progressively enable strict flag**.
 
 There are several potential pitfalls related to progressively enabling strict mode. Which will
 benefit from having a plan on how we should tackle the migration. Each category of files should have
-a proper example how how they should be migrated. And during the initial migration period we should
-not prevent people from adding new files that are not strict. What we should prevent is people
-adding new non-strict files in the category that we are currently migrating.
+a proper example how how they should be migrated. And during the initial migration period a best
+effort should be made to be strict-compliant, but we should not prevent people from adding new files
+that are not strict. What we should prevent is people adding new non-strict files in the category
+that we are currently migrating.
 
 #### Preparation
 
