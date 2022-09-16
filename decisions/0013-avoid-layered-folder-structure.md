@@ -4,7 +4,7 @@ parent: Decisions
 nav_order: 13
 adr: "0013"
 status: In progress
-date: 2022-09-02
+date: 2022-09-16
 tags: [clients, angular]
 ---
 
@@ -31,8 +31,8 @@ the models are the request and responses. Which makes them a good starting point
 
 Use the **Place models next to their owner** for request and response models.
 
-A rule of thumb is to put any model that is defined in the abstraction in the abstraction directory.
-And any model defined in the service in the service directory. Abstractions are part of the service
+A rule of thumb is to put any model that is used in the abstraction in the abstraction directory.
+And any model used in the service in the service directory. Abstractions are part of the service
 public interface, while services are part of the internal interface.
 
 ### Example
