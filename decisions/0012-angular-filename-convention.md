@@ -51,6 +51,10 @@ The class names are expected to use the suffix as part of their class name as we
 implementation will be named `FolderServiceImplementation`, a request model will be named
 `FolderRequest`.
 
+Since abstracts are referenced far more frequently than implementations, they use the simplified
+type while implementations must specify they are implementations e.g `.service` for the abstract vs
+`.service.implementation` for the implantation.
+
 ### Positive Consequences <!-- optional -->
 
 - Since most of our code is written in Angular, we should use the Angular coding style guide.
