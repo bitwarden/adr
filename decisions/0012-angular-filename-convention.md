@@ -47,6 +47,10 @@ At Bitwarden we also use a couple of more types:
 - `.type` - Enum
 - `.service.implementation` - Implementation of an abstract service
 
+The class names are expected to use the suffix as part of their class name as well. I.e. a service
+implementation will be named `FolderServiceImplementation`, a request model will be named
+`FolderRequest`.
+
 ### Positive Consequences <!-- optional -->
 
 - Since most of our code is written in Angular, we should use the Angular coding style guide.
