@@ -30,11 +30,11 @@ Use the [**Angular coding style guide**][naming]. More specifically [Style 02-02
 These two style rules focuses on using dashes to separate words in the descriptive name, and dots to
 separate name from the type. Angular typically has the following types:
 
-- `service`
-- `component`
-- `pipe`
-- `module`
-- `directive`
+- `service` - Abstract Service
+- `component` - Angular Components
+- `pipe` - Angular Pipe
+- `module` - Angular Module
+- `directive` - Angular Directive
 
 At Bitwarden we also use a couple of more types:
 
