@@ -62,7 +62,6 @@ Example [PR for Folders](https://github.com/bitwarden/clients/pull/3732).
 
 ```ts
 class FolderDomain implements DecryptableDomain {
-
   id: string;
   name: EncString;
   revisionDate: Date;
@@ -103,9 +102,9 @@ class FolderView implements Encryptable<Folder> {
 Which would be used like this:
 
 ```ts
-  const folder = new Folder();
-  
-  const folderView: FolderView = this.cryptoService.decrypt(FolderView, folder);
+const folder = new Folder();
 
-  const encryptedFolder: Folder = this.cryptoService.encrypt(folderView);
+const folderView: FolderView = this.cryptoService.decrypt(FolderView, folder);
+
+const encryptedFolder: Folder = this.cryptoService.encrypt(folderView);
 ```
